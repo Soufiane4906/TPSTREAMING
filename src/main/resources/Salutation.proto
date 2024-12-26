@@ -1,0 +1,11 @@
+syntax = "proto3";
+option java_package= "org.example";
+service Salutation{
+  rpc message (stream SalutRequest) returns (SalutResponse);
+}
+message SalutRequest {
+  string name = 1;
+}
+message SalutResponse {
+  string message = 1;
+}
